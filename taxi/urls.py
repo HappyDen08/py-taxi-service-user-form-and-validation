@@ -51,13 +51,13 @@ urlpatterns = [
         assign_to_car,
         name="assign"
     ),
-    path("drivers/create/", DriverCreateView.as_view(), name="driver-create"),
     path("drivers/", DriverListView.as_view(), name="driver-list"),
+    path("drivers/create/", DriverCreateView.as_view(), name="driver-create"),
     path(
         "drivers/<int:pk>/", DriverDetailView.as_view(), name="driver-detail"
     ),
     path(
-        "drivers/<int:pk>/update/",
+        "drivers/<int:pk>/update/ ",
         DriverUpdateView.as_view(),
         name="driver-update"
     ),
