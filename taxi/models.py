@@ -1,7 +1,7 @@
+from django.core.validators import MinLengthValidator, RegexValidator
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.urls import reverse
-from django.core.validators import MinLengthValidator, RegexValidator
 
 
 class Manufacturer(models.Model):

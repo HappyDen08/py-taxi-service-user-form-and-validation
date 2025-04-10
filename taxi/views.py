@@ -8,6 +8,7 @@ from taxi.forms import (DriverCreationForm,
                         DriverLicenseUpdateForm,
                         CarCreationForm
                         )
+
 from taxi.models import Driver, Car, Manufacturer
 
 
@@ -86,6 +87,7 @@ class CarDeleteView(LoginRequiredMixin, generic.DeleteView):
 class DriverCreateView(LoginRequiredMixin, generic.CreateView):
     model = Driver
     form_class = DriverCreationForm
+    success_url = reverse_lazy("taxi:driver-list")
 
 
 class DriverListView(LoginRequiredMixin, generic.ListView):
